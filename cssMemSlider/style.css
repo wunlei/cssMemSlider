@@ -97,12 +97,32 @@ p {
   width: 100%;
 }
 
+label {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  cursor: pointer;
+}
+
 span {
   display: block;
   width: 1em;
   height: 1em;
   border-radius: 50%;
   border: 0.2em solid #92bde7;
+  background-color: #92bde7;
+  transition: 0.3s;
+}
+
+.controls__item:hover span {
+  border-color: #e3f1ff;
+  background-color: #e3f1ff;
+}
+
+.controls__item:active span {
+  border-color: #3082de;
+  background-color: #3082de;
 }
 
 #indicator1:checked ~ .slides > .slides-container {
@@ -135,4 +155,18 @@ span {
 
 #indicator4:checked ~ .caption > .caption-container {
   transform: translateX(-60%);
+}
+
+input:nth-child(1):checked ~ .controls .controls__item:nth-child(1) span,
+input:nth-child(2):checked ~ .controls .controls__item:nth-child(2) span,
+input:nth-child(3):checked ~ .controls .controls__item:nth-child(3) span,
+input:nth-child(4):checked ~ .controls .controls__item:nth-child(4) span {
+  background-color: transparent;
+}
+
+input:nth-child(1):checked ~ .controls .controls__item:nth-child(1):hover span,
+input:nth-child(2):checked ~ .controls .controls__item:nth-child(2):hover span,
+input:nth-child(3):checked ~ .controls .controls__item:nth-child(3):hover span,
+input:nth-child(4):checked ~ .controls .controls__item:nth-child(4):hover span {
+  border-color: #e3f1ff;
 }
