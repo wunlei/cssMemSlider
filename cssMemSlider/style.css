@@ -82,3 +82,35 @@ span {
   border-radius: 50%;
   border: 0.2em solid #92bde7;
 }
+
+#indicator1:checked ~ .slides > .slides-container {
+  transform: translateX(0);
+}
+
+#indicator1:checked ~ .caption > .caption-container {
+  transform: translateX(0);
+}
+
+#indicator2:checked ~ .slides > .slides-container {
+  transform: translateX(-20%);
+}
+
+#indicator2:checked ~ .caption > .caption-container {
+  transform: translateX(-20%);
+}
+
+#indicator3:checked ~ .slides > .slides-container {
+  transform: translateX(-40%);
+}
+
+#indicator3:checked ~ .caption > .caption-container {
+  transform: translateX(-40%);
+}
+
+#indicator4:checked ~ .slides > .slides-container {
+  transform: translateX(-60%);
+}
+
+#indicator4:checked ~ .caption > .caption-container {
+  transform: translateX(-60%);
+}
